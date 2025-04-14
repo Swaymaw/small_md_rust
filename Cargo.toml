@@ -1,0 +1,9 @@
+[package]
+name = "TinyMD"
+version = "0.1.0"
+authors = ["Swayam Singhal <swaymaw@gmail.com>"]
+edition = "2024"
+description = "A tiny markdown compiler based on Jesse's Tutorials."
+homepage = "https://jesselawson.org/rust"
+
+[dependencies]
