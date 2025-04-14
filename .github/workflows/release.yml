@@ -27,8 +27,9 @@ jobs:
         id: version
         run: |
           NEW_VERSION=$(vnext)
-          echo "Calculated version: $NEW_VERSION"
-          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          STRIPPED_VERSION=${NEW_VERSION#v}
+          echo "Calculated version: $STRIPPED_VERSION"
+          echo "new_version=$STRIPPED_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Update Cargo.toml Version
         run: |
