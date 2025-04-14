@@ -35,7 +35,7 @@ jobs:
         run: |
           # Update the <version> element in Cargo.toml (using sed, for example)
           # Assumes your version is inside <version> tags in Cargo.toml.
-          sed -i "s/<version>.*<\/version>/<version>${{ replace(steps.version.outputs.new_version, 'v', '') }}</version>/" Cargo.toml          cat Cargo.toml
+          sed -i "s/<version>.*<\/version>/<version>${{ steps.version.outputs.new_version }}</version>/" Cargo.toml          cat Cargo.toml
 
       - name: Commit updated version
         run: |
